@@ -26,18 +26,18 @@ sudo tar -xvzf img.tar.gz -C /www/vpns/
 sudo mv index.html /www/vpns/
 sudo mv /www/vpns/img/* /www/vpns/
 sudo cp ~/*.vpn /www/vpns/
-export AUTO_INSTALL=y
-export APPROVE_INSTALL=y
-export APPROVE_IP=y
-export IPV6_SUPPORT=n
-export PORT_CHOICE=1
-export PROTOCOL_CHOICE=1
-export DNS=11
-export COMPRESSION_ENABLED=n
-export CUSTOMIZE_ENC=n
-export CLIENT=client0
-export PASS=1
 sudo wget https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh
 sudo chmod +x openvpn-install.sh
+sudo export AUTO_INSTALL=y
+sudo export APPROVE_INSTALL=y
+sudo export APPROVE_IP=y
+sudo export IPV6_SUPPORT=n
+sudo export PORT_CHOICE=1
+sudo export PROTOCOL_CHOICE=1
+sudo export DNS=11
+sudo export COMPRESSION_ENABLED=n
+sudo export CUSTOMIZE_ENC=n
+sudo export CLIENT=client0
+sudo export PASS=1
 sudo ./openvpn-install.sh
 sudo cp ~/*.vpn /www/vpns/
