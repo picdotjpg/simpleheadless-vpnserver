@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head><h1>Openvpn - Simple Server</h1></head>
+<style>
+    body {
+      background-color: lightblue;
+    }
+    
+    h1 {
+      color: white;
+      text-align: center;
+    }
+    
+    p {
+      font-family: verdana;
+      font-size: 20px;
+    }
+
+
+/** 
+Windows GUI Install Drop Down
+**/
+
+
+    .Windows-config {
+        background-color: darkgray;
+            position: relative;
+      display: inline-block;
+    }
+    .Windows-config-content {
+    display: none;
+    position: relative;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+    .win-dropbtn {
+        border: none;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #008CBA;
+    }
+    .Windows-config:hover .Windows-config-content {display: block;}
+    .Windows-config:hover .win-dropbtn {background-color: #3e8e41;}
+
+
+/** 
+Linux GUI Install Drop Down
+**/
+.Linux-config {
+        background-color: darkgray;
+            position: absolute;
+      display: inline-block;
+    }
+    .Linux-config-content {
+   display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+    .lin-dropbtn {
+        border: none;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #00cc00;
+
+    }
+    .Linux-config:hover .Linux-config-content {display: block;}
+    .Linux-config:hover .lin-dropbtn {background-color: #3e8e41;}
+
+
+</style>
+<body>
+
+<p>
+<a href="test.html">Download .ovpn config File</a>
+</p>
+
+
+<!-- Windows config dropdown html -->
+
+<div class="Windows-config">
+    <img src="win.png" width="30px" height="30px" style="vertical-align:middle" loading="lazy" alt="Win Logo">
+    <button class="win-dropbtn"> Windows Gui Setup</button>
+        <div class="Windows-config-content">  
+    <p>
+    <b>How to use: (For Windows)  </b> 
+    </p>
+    <p class="usage0">
+        Download the config file
+    </p>
+    <p class="usage1">
+       Extract the contents
+    </p>
+    <p class="usage2">
+       Download Openvpn (if you havent already)
+    </p>
+    <p class="usage-win-1-img">
+       <img src="win1.PNG"  width="600" height="350" alt="openvpn-gui Configuration" />
+    </p>
+    <p class="usage-win-2-img">
+        <img src="win2.PNG"  width="300" height="350" alt="openvpn-gui Configuration" />
+    </p>
+
+    <p class="usage-win-3">
+       Set the .ovpn File you just downloaded as the config
+    </p>
+    <p class="usage-win-4-img">
+        <img src="win4.PNG"  width="300" height="300" alt="openvpn-gui Configuration" />
+    </p>
+    <p class="usage-win-5-img">
+        <img src="win5.PNG"  width="300" height="400" alt="openvpn-gui Configuration" />
+    </p>
+    <p class="usage-win-6">
+    Connect to the Server
+    </p>
+    <p class="usage-win-7-img">
+        <img src="win7.PNG"  width="300" height="300" alt="openvpn-gui Configuration" />
+    </p>
+    </div>
+</div>
+
+<!-- Linux config dropdown html -->
+
+<p>
+    <div class="Linux-config">
+        <img src="tux.png" width="30px" height="30px" style="vertical-align:middle" loading="lazy" alt="Linux Logo">
+        <button class="lin-dropbtn">Linux CLI setup</button>
+        <div class="Linux-config-content">  
+            <h3>
+                How to Use: (for Linux)
+            </h3>
+
+            <p>
+                Download the .ovpn Config file 
+            </p>
+            <p class="usage-lin-1-img">
+                <img src="lin1.png"  width="600" height="350" alt="openvpn-cli Configuration" />
+            </p>
+            <p>
+                Use your systems package manager to download openvpn
+            <p>
+                <i>
+                    Note, for *nix systems that do not have openvpn in their repositories, you can build from source from <a href="https://github.com/OpenVPN/openvpn"> Openvpn Github </a>
+                </i>
+            </p>
+            </p>
+            <p class="usage-lin-2-img">
+                <img src="lin2.png"  width="600" height="350" alt="openvpn-cli Configuration" />
+            </p>
+            <p>
+                After openvpn and its dependancies are installed,
+                use the cli tool to connect to the vpn server with the key you already downloaded
+            </p>
+            <p class="usage-lin-3-img">
+                <img src="lin3.png"  width="600" height="350" alt="openvpn-cli Configuration" />
+            </p>
+            <p>
+                If everything was set up right, you should see this message
+            </p>
+            <p class="usage-lin-4-img">
+                <img src="lin4.png"  width="600" height="350" alt="openvpn-cli Configuration" />
+            </p>
+
+             </div>
+</div>
+</p>
+<div class="setup">
+<h2>
+    <p style="margin: 50px 2px;">
+    How to setup a server
+</p>
+</h2>
+<p>
+Download the .sh & run it (reqiures super user access) <p style="color:black; background-color: lightgray; border-left: 6px solid red; borderWidth = 1px 5px;">  wget [] & sudo chmod +x setupvpn.sh & sudo ./setupvpn.sh</style>
+</p>
+</p>
+
+</div>
+</body>
+</html>
