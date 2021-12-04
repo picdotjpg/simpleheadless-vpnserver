@@ -53,6 +53,6 @@ export COMPRESSION_ENABLED=n
 export CUSTOMIZE_ENC=n
 export CLIENT=client0
 export PASS=1
-sudo ./openvpn-install.sh
+sudo AUTO_INSTALL=y CLIENT=client0 ./openvpn-install.sh
 sudo cp /root/*.vpn /www/vpns/
 sudo cp $HOME/client0.ovpn /www/vpns/
