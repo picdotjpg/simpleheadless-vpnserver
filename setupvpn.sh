@@ -34,6 +34,7 @@ sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/m
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/win7.PNG -P /www/vpns/
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/win.png -P /www/vpns/
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/tux.png -P /www/vpns/
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/setupvpn.sh -P $HOME/
 sudo tar -xvzf img.tar.gz -C /www/vpns/
 sudo mv index.html /www/vpns/
 sudo mv /www/vpns/img/* /www/vpns/
