@@ -15,8 +15,8 @@ Before=network-online.target
 Wants=network-online.target
 [Service]
 Type=oneshot
-ExecStart=/bin/busybox httpd -h /www/vpns/ -p 80 & /www/refreshdir.sh
-ExecStop=/bin/busybox httpd -h /www/vpns/ -p 80 & /www/refreshdir.sh
+ExecStart=/bin/busybox httpd -h /www/vpns/ -p 80 
+ExecStop=/bin/busybox httpd -h /www/vpns/ -p 80 
 RemainAfterExit=yes
 [Install]
 WantedBy=multi-user.target" >/etc/systemd/system/vpnshttpd.service
