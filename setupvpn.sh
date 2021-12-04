@@ -27,6 +27,7 @@ sudo mv index.html /www/vpns/
 sudo mv /www/vpns/img/* /www/vpns/
 sudo cp ~/*.vpn /www/vpns/
 sudo wget https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/LICENSE -P /www/vpns/LICENSE.txt
 sudo chmod +x openvpn-install.sh
 sudo export AUTO_INSTALL=y
 sudo export APPROVE_INSTALL=y
