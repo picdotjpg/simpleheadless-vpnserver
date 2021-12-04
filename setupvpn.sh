@@ -7,7 +7,7 @@ sudo chmod 645 /www/vpns/
 #installs busybox for httpd
 apt-get update
 apt-get install -y busybox
-
+apt-get install -y python
 /bin/busybox httpd -h /www/vpns/ -p 80
 echo "[Unit]
 Description=Simple busybox httpd service
