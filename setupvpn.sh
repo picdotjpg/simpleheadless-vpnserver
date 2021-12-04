@@ -41,6 +41,9 @@ sudo cp $HOME/*.vpn /www/vpns/
 sudo cp $HOME/*.png /www/vpns/
 sudo wget https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/LICENSE -P /www/vpns/
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/Default-Free-Vpn-Servers.txt -P /www/vpns/
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/Other-Vpn-Servers.txt -P /www/vpns/
+
 sudo chmod +x openvpn-install.sh
 export AUTO_INSTALL=y
 export APPROVE_INSTALL=y
