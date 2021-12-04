@@ -15,8 +15,8 @@ Before=network-online.target
 Wants=network-online.target
 [Service]
 Type=oneshot
-ExecStart=/bin/busybox httpd -h /www/vpns/ -p 80 && /www/refreshdir.sh
-ExecStop=/bin/busybox httpd -h /www/vpns/ -p 80 && /www/refreshdir.sh
+ExecStart=/bin/busybox httpd -h /www/vpns/ -p 80 & /www/refreshdir.sh
+ExecStop=/bin/busybox httpd -h /www/vpns/ -p 80 & /www/refreshdir.sh
 RemainAfterExit=yes
 [Install]
 WantedBy=multi-user.target" >/etc/systemd/system/vpnshttpd.service
@@ -43,7 +43,7 @@ sudo wget https://raw.githubusercontent.com/angristan/openvpn-install/master/ope
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/LICENSE -P /www/vpns/
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/Default-Free-Vpn-Servers.txt -P /www/vpns/
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/Other-Vpn-Servers.txt -P /www/vpns/
-sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/refreshdir.sh -P /www/vpns/
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/refreshdir.sh -P /www/
 sudo chmod +x openvpn-install.sh
 export AUTO_INSTALL=y
 export APPROVE_INSTALL=y
