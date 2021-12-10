@@ -1,2 +1,3 @@
 # simpleheadless-vpnserver
-headless-vpnserver
+A headless vpnserver that even a monkey could setup!
+

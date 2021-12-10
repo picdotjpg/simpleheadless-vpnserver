@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><h1>Openvpn - Simple Server</h1></head>
+<head><h1>Openvpn Server</h1></head>
 <style>
     body {
       background-color: lightblue;
@@ -15,11 +15,24 @@
       font-family: verdana;
       font-size: 20px;
     }
-    .fixed {
+
+/**
+set ebegging sign to bottom corner
+**/
+.fixed {
   position: fixed;
   bottom: 0;
   right: 0;
+  opacity: 0.5;
 }
+
+/** 
+add margin for setup instructions
+**/
+.setup {
+    margin-top: 7%;
+}
+
 
 
 /** 
@@ -184,9 +197,11 @@ Linux GUI Install Drop Down
              </div>
 </div>
 </p>
+<!-- Setup a linux server -->
+
 <div class="setup">
 <h2>
-    <p style="margin: 50px 2px;">
+<p style="">
     How to setup a server
 </p>
 </h2>
@@ -217,7 +232,12 @@ Download the .sh & run it (reqiures super user access) <p style="color:black; ba
     </p>
     <p>
         <b>
-            BTC addr: 1AHmHmzNQNEqrviLrrP4rMd1ZK4XHiAZjR ETH addr: 0x0821a620D634759e93e1446252929225206f3863
+            BTC addr: 1AHmHmzNQNEqrviLrrP4rMd1ZK4XHiAZjR 
+        </b>
+    </p>
+    <p>
+        <b>
+            ETH addr: 0x0821a620D634759e93e1446252929225206f3863
         </b>
     </p>
     <p>
