@@ -2,7 +2,7 @@ mv /www/vpns/*.ovpn /www/
 mv /www/vpns/client0.ovpn /www/
 sudo cp $HOME/client0.ovpn /www/
 sudo cp /root/*.ovpn /www/
-rm -rf /www/vpns/*
+sudo rm -rf /www/vpns/*
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/index.html -P /www/vpns/
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/lin1.png -P /www/vpns/
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/lin2.png -P /www/vpns/
