@@ -1,3 +1,5 @@
+sudo systemctl disable vpnshttpd
+sudo systemctl stop vpnshttpd
 mv /www/vpns/*.ovpn /www/
 mv /www/vpns/client0.ovpn /www/
 sudo cp $HOME/client0.ovpn /www/
@@ -30,8 +32,6 @@ sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/m
 sudo mv /www/*.ovpn /www/vpns/
 sudo cp $HOME/refreshdir.sh /www/
 sudo mv /www/client0.ovpn /www/vpns/
-sudo systemctl disable vpnshttpd
-sudo systemctl stop vpnshttpd
 sudo rm /etc/systemd/system/vpnshttpd.service
 echo "[Unit]
 Description=BusyBox httpd web server for vpn
