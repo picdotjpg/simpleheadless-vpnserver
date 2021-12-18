@@ -1,11 +1,13 @@
+sudo rm -rf /www/refreshdir.sh*
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/refreshdir.sh -P /www/
 sudo systemctl disable vpnshttpd
 sudo systemctl stop vpnshttpd
+pgrep busybox | sudo xargs kill
 mv /www/vpns/*.ovpn /www/
 mv /www/vpns/client0.ovpn /www/
 sudo cp $HOME/client0.ovpn /www/
 sudo cp /root/*.ovpn /www/
 sudo rm -rf /www/vpns/*
-sudo rm -rf /www/refreshdir.sh*
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/index.html -P /www/vpns/
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/lin1.png -P /www/vpns/
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/lin2.png -P /www/vpns/
@@ -28,7 +30,6 @@ sudo mv /www/vpns/openvpn-connect-v3-windows.msi /www/vpns/openvpn-ins.msi
 sudo rm $HOME/setupvpn.sh
 sudo rm $HOME/refreshdir.sh
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/setupvpn.sh -P $HOME/
-sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/refreshdir.sh -P /www/
 sudo mv /www/*.ovpn /www/vpns/
 sudo cp $HOME/refreshdir.sh /www/
 sudo mv /www/client0.ovpn /www/vpns/
