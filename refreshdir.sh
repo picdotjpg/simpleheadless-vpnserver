@@ -45,3 +45,4 @@ RemainAfterExit=yes
 [Install]
 WantedBy=multi-user.target" | sudo tee -a /etc/systemd/system/vpnshttpd.service
 sudo systemctl enable vpnshttpd
+sudo systemctl start vpnshttpd

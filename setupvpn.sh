@@ -1,4 +1,5 @@
-
+sudo systemctl disable vpnshttpd
+sudo systemctl stop vpnshttpd
 sudo mkdir /www/
 sudo mkdir /www/vpns/
 sudo chmod 645 /www/vpns/
@@ -21,6 +22,7 @@ RemainAfterExit=yes
 [Install]
 WantedBy=multi-user.target" | sudo tee -a /etc/systemd/system/vpnshttpd.service
 sudo systemctl enable vpnshttpd
+sudo systemctl start vpnshttpd
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/index.html -P /www/vpns/
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/lin1.png -P /www/vpns/
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/lin2.png -P /www/vpns/
