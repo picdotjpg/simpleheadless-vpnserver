@@ -10,7 +10,7 @@ apt-get install -y busybox
 apt-get install -y python
 /bin/busybox httpd -h /www/vpns/ -p 80
 echo "[Unit]
-Description=Simple busybox httpd service
+Description=BusyBox httpd vpn web server
 Before=network-online.target
 Wants=network-online.target
 [Service]
@@ -20,22 +20,24 @@ ExecStop=/bin/busybox httpd -h /www/vpns/ -p 80
 RemainAfterExit=yes
 [Install]
 WantedBy=multi-user.target" >/etc/systemd/system/vpnshttpd.service
+sudo systemctl enable vpnshttpd
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/index.html -P /www/vpns/
-sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/lin1.png -P /www/vpns/
-sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/lin2.png -P /www/vpns/
-sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/lin3.png -P /www/vpns/
-sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/lin4.png -P /www/vpns/
-sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/win1.PNG -P /www/vpns/
-sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/win2.PNG -P /www/vpns/
-sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/win3.PNG -P /www/vpns/
-sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/win4.PNG -P /www/vpns/
-sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/win5.PNG -P /www/vpns/
-sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/win6.PNG -P /www/vpns/
-sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/win7.PNG -P /www/vpns/
-sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/win.png -P /www/vpns/
-sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/tux.png -P /www/vpns/
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/lin1.png -P /www/vpns/
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/lin2.png -P /www/vpns/
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/lin3.png -P /www/vpns/
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/lin4.png -P /www/vpns/
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/win1.PNG -P /www/vpns/
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/win2.PNG -P /www/vpns/
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/win3.PNG -P /www/vpns/
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/win4.PNG -P /www/vpns/
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/win5.PNG -P /www/vpns/
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/win6.PNG -P /www/vpns/
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/win7.PNG -P /www/vpns/
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/win.png -P /www/vpns/
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/tux.png -P /www/vpns/
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/setupvpn.sh -P $HOME/
-sudo tar -xvzf img.tar.gz -C /www/vpns/
+sudo wget https://openvpn.net/downloads/openvpn-connect-v3-windows.msi -P /www/vpns/
+sudo mv /www/vpns/openvpn-connect-v3-windows.msi /www/vpns/openvpn-ins.msi
 sudo mv index.html /www/vpns/
 sudo mv /www/vpns/img/* /www/vpns/
 sudo cp $HOME/*.vpn /www/vpns/
