@@ -23,7 +23,7 @@ sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/m
 sudo rm $HOME/setupvpn.sh
 sudo rm $HOME/refreshdir.sh
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/setupvpn.sh -P $HOME/
-sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/refreshdir.sh -P $HOME/
+sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/refreshdir.sh -P /www/
 sudo mv /www/*.ovpn /www/vpns/
-sudo cp $HOME/refreshdir.sh /www/refreshdir.sh
+sudo cp $HOME/refreshdir.sh /www/
 sudo mv /www/client0.ovpn /www/vpns/
