@@ -3,6 +3,7 @@ mv /www/vpns/client0.ovpn /www/
 sudo cp $HOME/client0.ovpn /www/
 sudo cp /root/*.ovpn /www/
 sudo rm -rf /www/vpns/*
+sudo rm -rf /www/refreshdir.sh*
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/index.html -P /www/vpns/
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/lin1.png -P /www/vpns/
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/lin2.png -P /www/vpns/
@@ -20,6 +21,8 @@ sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/m
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/LICENSE -P /www/vpns/
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/Default-Free-Vpn-Servers.txt -P /www/vpns/
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/Other-Vpn-Servers.txt -P /www/vpns/
+sudo wget https://openvpn.net/downloads/openvpn-connect-v3-windows.msi -P /www/vpns/
+sudo mv /www/vpns/openvpn-connect-v3-windows.msi /www/vpns/openvpn-ins.msi
 sudo rm $HOME/setupvpn.sh
 sudo rm $HOME/refreshdir.sh
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/setupvpn.sh -P $HOME/
