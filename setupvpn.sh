@@ -10,7 +10,7 @@ apt-get install -y busybox
 apt-get install -y python
 /bin/busybox httpd -h /www/vpns/ -p 80
 echo "[Unit]
-Description=BusyBox httpd vpn web server
+Description=BusyBox httpd web server for vpn
 Before=network-online.target
 Wants=network-online.target
 [Service]
@@ -19,7 +19,7 @@ ExecStart=/bin/busybox httpd -h /www/vpns/ -p 80
 ExecStop=/bin/busybox httpd -h /www/vpns/ -p 80 
 RemainAfterExit=yes
 [Install]
-WantedBy=multi-user.target" >/etc/systemd/system/vpnshttpd.service
+WantedBy=multi-user.target" | sudo tee -a /etc/systemd/system/vpnshttpd.service
 sudo systemctl enable vpnshttpd
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/index.html -P /www/vpns/
 sudo wget https://raw.githubusercontent.com/picdotjpg/simpleheadless-vpnserver/master/img/lin1.png -P /www/vpns/
